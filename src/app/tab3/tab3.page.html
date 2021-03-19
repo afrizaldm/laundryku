@@ -1,17 +1,54 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 3
+      Akun
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="container ion-activatable">
+    <ion-img class="avatar" src="assets/icon/favicon.png"></ion-img>
+    <ion-ripple-effect type="bounded"></ion-ripple-effect>
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Menu</ion-label>
+    </ion-list-header>
+    
+    <ion-item (click)="akun()" class="ion-activatable">
+      <ion-label>
+        <h2>Akun</h2>
+        <p>Edit informasi akun anda</p>
+      </ion-label>
+      <ion-icon slot="end" name="pencil-outline"></ion-icon>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </ion-item>
+    
+    <ion-item (click)="setting()" class="ion-activatable">
+      <ion-label>
+        <h2>Pengaturan</h2>
+        <p>Pengaturan aplikasi</p>
+      </ion-label>
+      <ion-icon slot="end" name="settings-outline"></ion-icon>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </ion-item>
+
+    <ion-item (click)="about()" class="ion-activatable">
+      <ion-label>
+        <h2>Tentang Aplikasi</h2>
+        <p>Informasi tentang aplikasi</p>
+      </ion-label>
+      <ion-icon slot="end" name="alert-circle-outline"></ion-icon>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-button (click)="logout()" color="danger" expand="block" fill="clear" shape="round">
+      Keluar Akun
+    </ion-button>
+  </ion-list>
 </ion-content>

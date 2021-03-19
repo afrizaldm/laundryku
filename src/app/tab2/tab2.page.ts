@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  status: number = 1
+
+  items: Array<any> = [
+    {date: '17 Maret 2021', nota: 'N00123', total: '3 KG', address: 'Jl. Thamrin 35 A'},
+    {date: '17 Maret 2021', nota: 'N00123', total: '3 KG', address: 'Jl. Thamrin 35 A'},
+    {date: '17 Maret 2021', nota: 'N00123', total: '3 KG', address: 'Jl. Thamrin 35 A'},
+  ]
+
   constructor() {}
+
+  segmentChanged(ev: any) {}
 
 }
